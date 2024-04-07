@@ -7,11 +7,12 @@ This repository contains the official implementation of our paper:
 **Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**<br>
 ## Introduction
 [**Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**](https://ieeexplore.ieee.org/abstract/document/10473097),<br>
-In:*IEEE TRANSACTIONS ON BIG DATA,2024*,<br>
+In: *IEEE TRANSACTIONS ON BIG DATA,2024*<br>
 [[arXiv](https://arxiv.org/pdf/2404.00667.pdf)]
 
----
-![](img/WDA.png)
+![img](img/WDA.png)
+
+
 ## Installation
 **Requirements.** To reproduce our results, we recommend Python >=3.6, PyTorch >=1.4, CUDA >=10.0. At least one GPU with a minimum of 11GB memory is required for training.
 
