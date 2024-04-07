@@ -97,7 +97,7 @@ Run single-scale inference from your model
 ```
 python evalue_segmentation.py
 ```
-If you would like to skip this train, you can use our pre-trained model:
+You can use our pre-trained model:
 [inference.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr) 
 
 
