@@ -27,7 +27,7 @@ conda create --name wda-net
 source activate wda-net
 ```
 
-1. install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
+2. install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
 
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
