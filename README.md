@@ -21,31 +21,31 @@ In: *IEEE TRANSACTIONS ON BIG DATA,2024*<br>
 
 
 
-1. create conda environment:
+1. Create conda environment:
 ```
 conda create --name wda-net
 source activate wda-net
 ```
 
-2. install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
+2. Install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
 
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 ```
 
-3. install the dependencies:
+3. Install the dependencies:
 ```
 pip install -r requirements.txt
 ```
 
-4. download data ([vnc](https://github.com/unidesigner/groundtruth-drosophila-vnc/tree/master/stack2/raw), [cvlab](https://www.epfl.ch/labs/cvlab/data/data-em//) and create symlinks in the ```./data``` folder, as follows:
+4. Download data ([vnc](https://github.com/unidesigner/groundtruth-drosophila-vnc/tree/master/stack2/raw), [EPFL](https://www.epfl.ch/labs/cvlab/data/data-em//) and create symlinks in the ```./data``` folder, as follows:
 
 ```
 ./data/50%vncdata -> <symlink to VNC>
 ./data/50%vncdata/train/img
 ./data/50%vncdata/train/lab
 
-./data/cvlabdata -> <symlink to CVLAB>
+./data/cvlabdata -> <symlink to EPFL>
 ./data/cvlabdata/train/img
 ./data/cvlabdata/train/lab
 ./data/cvlabdata/train/15%_split1
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 ```
 
-**Tip:** We provide labels with 15% center points in target domain .You can download the data:
+**Tip:** We provide labels with 15% center points in target domain. You can download the data:
 [15%_split1](https://drive.google.com/drive/folders/1D9TKm7Wo6ohX3AmjZSmo4m4cl7Lb6v_Z)
 
 
@@ -79,24 +79,25 @@ If you would like to skip this step, you can use our pre-trained models:
 [vnc_full_supervised.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr) 
 **Tip:** You can download the file , as follows: ```./pretrain_model/vnc_full_supervised.pth```:
 
-1.To run the detection model
-**Target domain: CVLAB**
+1.Run the detection model
+**Target domain: EPFL**
 ```
 python 01_stage1_vnc.py
 ```
-To learn discriminative information from limited scarce point annotations by detection training
 
-2.To run the segmentation model
-**Target domain: CVLAB**
+2.Run the segmentation model
+**Target domain: EPFL**
 ```
 python 02_stage2_vnc.py
 ```
-To perform self-training through pseudo labels
 
 ## Inference
 
-To run single-scale inference from your snapshot, use ```evalue_segmentation.py```.
-If you would like to skip this train, you can use our pre-trained models:
+Run single-scale inference from your model
+```
+python evalue_segmentation.py
+```
+If you would like to skip this train, you can use our pre-trained model:
 [inference.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr) 
 
 
