@@ -5,11 +5,21 @@
 This repository contains the official implementation of our paper:
 
 **Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**<br>
-Big Data 2024. [[pdf](https://ieeexplore.ieee.org/abstract/document/10473097)] [[arXiv](https://arxiv.org/pdf/2404.00667.pdf)]
+## Introduction
+[**Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**](https://ieeexplore.ieee.org/abstract/document/10473097),<br>
+In:*IEEE TRANSACTIONS ON BIG DATA,2024*,<br>
+[[arXiv](https://arxiv.org/pdf/2404.00667.pdf)]
+
 ---
 ![](img/WDA.png)
 ## Installation
-**Requirements.** To reproduce our results, we recommend Python >=3.6, PyTorch >=1.4, CUDA >=10.0. At least one GTX 1080Ti GPU (11Gb) .
+**Requirements.** To reproduce our results, we recommend Python >=3.6, PyTorch >=1.4, CUDA >=10.0. At least one GPU with a minimum of 11GB memory is required for training.
+
+
+
+
+
+
 
 1. create conda environment:
 ```
@@ -17,7 +27,7 @@ conda create --name wda-net
 source activate wda-net
 ```
 
-2. install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
+1. install PyTorch >=1.4 (see [PyTorch instructions](https://pytorch.org/get-started/locally/)). For example,
 
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
@@ -49,7 +59,7 @@ pip install -r requirements.txt
 
 
 
-##Training 
+## Training 
 
 
 0.To run the count model
@@ -58,8 +68,7 @@ python 00_count_main.py
 ```
 If you would like to skip this step, you can use our pre-trained models:
 [vnc_count.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr)
-**Tip:** You can download the file and create symlinks in the ```./pretrain_model``` folder, as follows:  
-```./pretrain_model/vnc_count.pth```:
+**Tip:** You can download the file and create symlinks in the ```./pretrain_model``` folder, as follows: ```./pretrain_model/vnc_count.pth```:
 
 0.To run the pretrained model
 **Source domain: VNC**
@@ -68,8 +77,7 @@ python 00_Full-Supervised.py
 ```
 If you would like to skip this step, you can use our pre-trained models:
 [vnc_full_supervised.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr) 
-**Tip:** You can download the file , as follows:  
-```./pretrain_model/vnc_full_supervised.pth```:
+**Tip:** You can download the file , as follows: ```./pretrain_model/vnc_full_supervised.pth```:
 
 1.To run the detection model
 **Target domain: CVLAB**
