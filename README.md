@@ -4,7 +4,6 @@
 
 This repository contains the official implementation of our paper:
 
-**Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**<br>
 ## Introduction
 [**Weakly-Supervised Cross-Domain Segmentation of Electron Microscopy with Sparse Point Annotation**](https://ieeexplore.ieee.org/abstract/document/10473097),<br>
 In: *IEEE TRANSACTIONS ON BIG DATA,2024*<br>
