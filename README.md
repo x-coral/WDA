@@ -38,7 +38,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 pip install -r requirements.txt
 ```
 
-4. Download data ([vnc](https://github.com/unidesigner/groundtruth-drosophila-vnc/tree/master/stack2/raw), [EPFL](https://www.epfl.ch/labs/cvlab/data/data-em//) and create symlinks in the ```./data``` folder, as follows:
+4. Download data ([VNC](https://github.com/unidesigner/groundtruth-drosophila-vnc/tree/master/stack2/raw), [EPFL](https://www.epfl.ch/labs/cvlab/data/data-em//) and create symlinks in the ```./data``` folder, as follows:
 
 ```
 ./data/50%vncdata -> <symlink to VNC>
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ## Training 
 
 
-0.To run the count model
+0.Run the count model
 ```
 python 00_count_main.py
 ```
@@ -70,7 +70,7 @@ If you would like to skip this step, you can use our pre-trained models:
 [vnc_count.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr)
 **Tip:** You can download the file and create symlinks in the ```./pretrain_model``` folder, as follows: ```./pretrain_model/vnc_count.pth```:
 
-0.To run the pretrained model
+1.Run the pretrained model
 **Source domain: VNC**
 ```
 python 00_Full-Supervised.py
@@ -79,13 +79,13 @@ If you would like to skip this step, you can use our pre-trained models:
 [vnc_full_supervised.pth](https://drive.google.com/drive/folders/1ippr-tdam7SjBSm6-NgSb0bMqx0WH1Tr) 
 **Tip:** You can download the file , as follows: ```./pretrain_model/vnc_full_supervised.pth```:
 
-1.Run the detection model
+2.Run the detection model
 **Target domain: EPFL**
 ```
 python 01_stage1_vnc.py
 ```
 
-2.Run the segmentation model
+3.Run the segmentation model
 **Target domain: EPFL**
 ```
 python 02_stage2_vnc.py
