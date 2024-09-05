@@ -8,7 +8,7 @@ from add_arguments import get_arguments
 from dataset.source_dataset import *
 from dataset.target_dataset import *
 from utils.stats_utils import *
-from model.HSC82 import Counting_Model, PGS_Net
+from model.HSC82 import Counting_Model, WDA_Net_r
 from utils.loss import *
 from val import validate_model, val_count_model
 import xlsxwriter
