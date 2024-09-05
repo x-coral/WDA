@@ -44,7 +44,7 @@ def main():
                           crop_size=args.input_size, batch_size=args.batch_size),
         batch_size=1, shuffle=False)
 
-    model = PGS_Net(in_channels=1, out_channels=2, device=args.gpu)
+    model = WDA_Net_r(in_channels=1, out_channels=2, device=args.gpu)
     model.train()
 
     if usecuda:
